@@ -3,6 +3,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #272757;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
 body,
 header {
     display: flex;
@@ -14,4 +22,40 @@ header,
 main {
     border: 2px solid black;
     width: 600px;
+    z-index: 3;
+}
+
+a {
+    color: pink;
+}
+
+a:hover {
+    color: red;
+}
+
+.star-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.8;
+    }
 }
