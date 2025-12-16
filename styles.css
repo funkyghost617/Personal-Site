@@ -19,7 +19,8 @@ header {
 }
 
 header,
-main {
+main,
+footer {
     border: 2px solid black;
     width: 600px;
     z-index: 3;
