@@ -13,6 +13,6 @@ for (let i = 0; i < numStars; i++) {
     star.style.position = absolute;
     star.style.left = `${Math.random() * 100}%`;
     star.style.top = `${Math.random() * 100}%`;
-    star.style.width = `${Math.random() * 3 + 1}px`;
+    star.style.width = `${Math.random() * 20 + 20}px`;
     container.appendChild(star);
 }
