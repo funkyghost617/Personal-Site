@@ -10,7 +10,7 @@ for (let i = 0; i < numStars; i++) {
     } else {
         star.src = "miniStar3.gif";
     }
-    star.style.position = absolute;
+    star.style.position = "absolute";
     star.style.left = `${Math.random() * 100}%`;
     star.style.top = `${Math.random() * 100}%`;
     star.style.width = `${Math.random() * 20 + 20}px`;
