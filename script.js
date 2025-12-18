@@ -3,9 +3,9 @@ const numStars = 100;
 
 for (let i = 0; i < numStars; i++) {
     let star = document.createElement("img");
-    if (i > 10) {
+    if (i < 10) {
         star.src = "miniStar2.gif";
-    } else if (i > 55) {
+    } else if (i < 55) {
         star.src = "miniStar1.gif";
     } else {
         star.src = "miniStar3.gif";
