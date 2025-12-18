@@ -11,10 +11,10 @@ for (let i = 0; i < numStars; i++) {
     setTimeout(function() {
         if (i < 10) {
         star.src = "miniStar2.gif";
-    } else if (i < 55) {
+        } else if (i < 55) {
         star.src = "miniStar1.gif";
-    } else {
+        } else {
         star.src = "miniStar3.gif";
-    }
+        }
     }, Math.floor(Math.random() * 300));
 }
