@@ -2,12 +2,17 @@ const container = document.querySelector(".star-background");
 const numStars = 100;
 
 for (let i = 0; i < numStars; i++) {
-    let star = document.createElement("div");
-    star.classList.add("star");
+    let star = document.createElement("img");
+    if (i > 10) {
+        star.src = "miniStar2.gif";
+    } else if (i > 55) {
+        star.src = "miniStar1.gif";
+    } else {
+        star.src = "miniStar3.gif";
+    }
+    star.style.position = absolute;
     star.style.left = `${Math.random() * 100}%`;
     star.style.top = `${Math.random() * 100}%`;
     star.style.width = `${Math.random() * 3 + 1}px`;
-    star.style.height = star.style.width;
-    star.style.animationDuration = `${Math.random() * 3 + 1}s`;
     container.appendChild(star);
 }
