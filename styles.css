@@ -7,6 +7,7 @@ body {
     background: #272757;
     color: white;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     margin: 0;
 }
@@ -22,8 +23,16 @@ header,
 main,
 footer {
     border: 2px solid black;
-    width: 600px;
+    width: 100vw;
     z-index: 3;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0px;
+    margin-bottom: -25px;
 }
 
 a {
@@ -40,9 +49,24 @@ a:focus {
     border-radius: 5px;
 }
 
+
+
 .star-background {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+@media (min-width: 768px) {
+    header,
+    main,
+    footer {
+        width: 600px;
+    }
+    
+    main,
+    footer {
+        padding: 10px;
+    }
 }
