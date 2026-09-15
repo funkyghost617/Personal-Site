@@ -1,177 +1,110 @@
-* {
-    font-family: "Rubik", sans-serif;
-    box-sizing: border-box;
+:root {
+    --base-color: #FFFFFF;
+    --base-variant: #A8B0F9;
+    --text-color: #413C3C;
+    --secondary-text: #212529;
+    --primary-color: #81B29A;
+    --accent-color: #E07A5F;
 }
-
-html {
-    font-size: 110%;
+.darkmode {
+    --base-color: #171C28;
+    --base-variant: #525893;
+    --text-color: #ECE6E2;
+    --secondary-text: #FFFFFF;
+    --primary-color: #81B29A;
+    --accent-color: #E07A5F;
 }
-
-body {
-    background: #272757;
-    color: white;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    margin: 0px;
-}
-
-body,
-header {
+#theme-switch {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border-radius: 40%;
+    border-color: var(--secondary-text);
+    border-style: solid;
+    background-color: var(--primary-color);
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
-
-header,
-main,
-footer {
-    border: 2px solid black;
-    width: 100%;
-    z-index: 3;
-}
-
-main,
-footer {
-    padding: 10px;
-    font-size: 125%;
-}
-
-header h1 {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 0px;
-    margin-bottom: -25px;
+    align-items: center;
 }
-
-header p a {
-    font-size: 1.3rem;
+#theme-switch svg {
+   fill: var(--base-color);
 }
-
-header h1 img {
-    width: 20%;
+#theme-switch svg:last-child {
+    display: none;
 }
-
-a {
-    color: pink;
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
-
-a:hover {
-    color: red;
+.darkmode #theme-switch svg:first-child {
+    display: none;
 }
-
-a:active,
-a:focus {
-    border: 2px solid white;
-    border-radius: 5px;
+#theme-switch-div {
+    position: relative;
 }
-
-.star-background {
+.overlay {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 40%;
 }
-
-@media (min-width: 768px) {
-    html {
-        font-size: 100%;
-    }
-
-    header,
-    main,
-    footer {
-        width: 700px;
-        font-size: 140%;
-    }
+#theme-switch-div:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
 }
-
-* {
-    font-family: "Rubik", sans-serif;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 110%;
-}
-
 body {
-    background: #272757;
-    color: white;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    margin: 0px;
+    font-family: "Rubik", sans-serif;
+    background: var(--base-color);
+    color: var(--text-color);
+    transition: background 0.4s ease;
 }
-
-body,
 header {
+    font-family: "Roboto Mono", sans-serif;
+    background: var(--base-variant);
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    vertical-align: center;
     align-items: center;
+    transition: background 0.4s ease;
+    padding: 0 20px 0;
 }
-
-header,
-main,
-footer {
-    border: 2px solid black;
-    width: 100%;
-    z-index: 3;
-}
-
-main,
-footer {
-    padding: 10px;
-    font-size: 125%;
-}
-
 header h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: -25px;
+    width: 80%;
+}
+.page-link {
+    color: var(--secondary-text);
+}
+.page-link:hover {
+    background-color: var(--accent-color);
+}
+.page-link:not([href]):hover {
+    background-color: var(--base-variant);
+    cursor: default;
+}
+#desktop-page-links {
+    display: none;
+}
+#mobile-page-links {
+    display: block;
+}
+main {
+    padding: 0 10px 0;
 }
 
-header p a {
-    font-size: 1.3rem;
-}
-
-header h1 img {
-    width: 20%;
-}
-
-a {
-    color: pink;
-}
-
-a:hover {
-    color: red;
-}
-
-a:active,
-a:focus {
-    border: 2px solid white;
-    border-radius: 5px;
-}
-
-.star-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 100%;
+@media (min-width: 600px) {
+    #desktop-page-links {
+        display: block;
+        padding-right: 40px;
     }
-
-    header,
-    main,
-    footer {
-        width: 700px;
-        font-size: 140%;
+    #mobile-page-links {
+        display: none;
+    }
+    header h1 {
+        width: auto;
+        padding-right: 40px;
     }
 }
