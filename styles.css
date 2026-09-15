@@ -81,6 +81,9 @@ header h1 {
 .page-link:hover {
     background-color: var(--accent-color);
 }
+.page-link:not([href]) {
+    border: var(--primary-color) 5px solid;
+}
 .page-link:not([href]):hover {
     background-color: var(--base-variant);
     cursor: default;
@@ -94,8 +97,28 @@ header h1 {
 main {
     padding: 0 10px 0;
 }
+figure {
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+img {
+    width: 100%;
+    max-width: 800px;
+}
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px 10px 0;
+}
+section a {
+    color: var(--secondary-text);
+}
+section a:hover {
+    background-color: var(--accent-color);
+}
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
     #desktop-page-links {
         display: block;
         padding-right: 40px;
@@ -106,5 +129,16 @@ main {
     header h1 {
         width: auto;
         padding-right: 40px;
+    }
+    main {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    main h2 {
+        width: 100%;
+    }
+    main p {
+        width: 500px;
+        margin-right: 50px;
     }
 }
