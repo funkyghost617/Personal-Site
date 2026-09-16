@@ -14,6 +14,9 @@
     --primary-color: #81B29A;
     --accent-color: #E07A5F;
 }
+* {
+    box-sizing: border-box;
+}
 #theme-switch {
     height: 60px;
     width: 60px;
@@ -57,6 +60,8 @@
     cursor: pointer;
 }
 body {
+    height: 90vh;
+    min-height: 600px;
     font-family: "Rubik", sans-serif;
     background: var(--base-color);
     color: var(--text-color);
@@ -117,6 +122,35 @@ section a {
 section a:hover {
     background-color: var(--accent-color);
 }
+#CV h2 {
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+#CV p {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+#CV p.tabbed-p {
+    max-width: calc(100% - 40px);
+    margin-bottom: 5px;
+    margin-left: 40px;
+
+}
+footer {
+    margin-top: 50px;
+    height: 50px;
+    width: 100%;
+    background-color: var(--base-variant);
+    opacity: 0.5;
+    flex-shrink: 0  ;
+}
+#main-and-footer {
+    height: calc(100% - 150px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
 
 @media (min-width: 750px) {
     #desktop-page-links {
@@ -140,5 +174,22 @@ section a:hover {
     main p {
         width: 500px;
         margin-right: 50px;
+    }
+    #download-links {
+        width: 300px;
+    }
+    #CV {
+        width: calc(100% - 350px);
+    }
+    #CV h2 {
+        width: 100%;
+        max-width: 750px;
+    }
+    #CV p {
+        width: 100%;
+        max-width: 700px;
+    }
+    #CV p.tabbed-p {
+        max-width: 600px;
     }
 }
