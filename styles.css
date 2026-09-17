@@ -60,12 +60,12 @@
     cursor: pointer;
 }
 body {
-    height: 90vh;
-    min-height: 600px;
+    min-height: 90vh;
     font-family: "Rubik", sans-serif;
     background: var(--base-color);
     color: var(--text-color);
     transition: background 0.4s ease;
+    margin-bottom: 10px;
 }
 header {
     font-family: "Roboto Mono", sans-serif;
@@ -114,7 +114,7 @@ img {
 section {
     display: flex;
     flex-flow: column nowrap;
-    margin: 20px 10px 0;
+    margin-top: 20px;
 }
 section a {
     color: var(--secondary-text);
@@ -191,5 +191,8 @@ footer {
     }
     #CV p.tabbed-p {
         max-width: 600px;
+    }
+    section {
+        margin: 20px 10px 0;
     }
 }
