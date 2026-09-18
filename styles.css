@@ -123,7 +123,7 @@ section a:hover {
     background-color: var(--accent-color);
 }
 #CV h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid var(--text-color);
     margin-bottom: 10px;
 }
 #CV p {
